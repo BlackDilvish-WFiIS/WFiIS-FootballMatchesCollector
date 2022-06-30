@@ -1,0 +1,53 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">FootballMathesCollector</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="admin">Strona admina</a>
+      </li>
+      <li class="nav-item" *ngIf="showModeratorBoard">
+        <a href="/mod" class="nav-link" routerLink="mod">Strona moderatora</a>
+      </li>
+      <li class="nav-item">
+        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">Panel użytkownika</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="clubs" class="nav-link">Zobacz kluby</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="addclub" class="nav-link">Dodaj nowy klub</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="players" class="nav-link">Zobacz piłkarzy</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="addplayer" class="nav-link">Dodaj nowego piłkarza</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="matches" class="nav-link">Zobacz mecze</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="addmatch" class="nav-link">Dodaj nowy mecz</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register">Zarejestruj się!</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Zaloguj się!</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">Wylogowanie</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

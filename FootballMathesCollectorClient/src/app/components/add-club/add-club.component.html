@@ -1,0 +1,44 @@
+<div>
+    <div class="submit-form">
+        <div *ngIf="!submitted">
+        <div class="form-group">
+            <label for="name">Nazwa klubu</label>
+            <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            [(ngModel)]="club.name"
+            name="name"
+            />
+        </div>
+        <div class="form-group">
+            <label for="country">Kraj</label>
+            <input
+            type="text"
+            class="form-control"
+            id="country"
+            required
+            [(ngModel)]="club.country"
+            name="country"
+            />
+        </div>
+        <div class="form-group">
+            <label for="league">Liga</label>
+            <input
+            type="text"
+            class="form-control"
+            id="league"
+            required
+            [(ngModel)]="club.league"
+            name="league"
+            />
+            </div>
+        <button (click)="saveClub()" class="btn btn-success">Dodaj</button>
+        </div>
+        <div *ngIf="submitted">
+        <h4>Pomyślnie dodano klub!</h4>
+        <button class="btn btn-success" (click)="newClub()">Dodaj nowy</button>
+        </div>
+    </div>
+</div>

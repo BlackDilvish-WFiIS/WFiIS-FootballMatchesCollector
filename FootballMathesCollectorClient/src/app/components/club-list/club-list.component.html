@@ -1,0 +1,43 @@
+<div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Wyszukaj po nazwie"
+          [(ngModel)]="name"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchname()"
+          >
+            Szukaj
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h4>Lista klubów</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let club of clubs; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveClub(club, i)"
+        >
+          {{ club.name }}
+        </li>
+      </ul>
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllClubs()">
+        Usuń wszystkie
+      </button>
+    </div>
+    <div class="col-md-6">
+      <app-club-details
+        [viewMode]="true"
+        [currentClub]="currentClub"
+      ></app-club-details>
+    </div>
+  </div>

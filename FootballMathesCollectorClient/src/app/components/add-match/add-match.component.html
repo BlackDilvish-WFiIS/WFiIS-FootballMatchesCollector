@@ -1,0 +1,297 @@
+<div>
+    <div class="submit-form">
+        <div *ngIf="!submitted">
+        <div class="form-group">
+            <label for="date">Data</label>
+            <input
+            type="text"
+            class="form-control"
+            id="date"
+            required
+            [(ngModel)]="match.date"
+            name="date"
+            />
+        </div>
+        <div class="form-group">
+            <label for="result">Wynik</label>
+            <input
+            type="text"
+            class="form-control"
+            id="result"
+            required
+            [(ngModel)]="match.result"
+            name="result"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeClub">Gospodarz</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeClub"
+            required
+            [(ngModel)]="match.homeClub"
+            name="homeClub"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayClub">Goście</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayClub"
+            required
+            [(ngModel)]="match.awayClub"
+            name="awayClub"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayGoalkeeper">Bramkarz gości</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayGoalkeeper"
+            required
+            [(ngModel)]="match.awayGoalkeeper"
+            name="awayGoalkeeper"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayLeftBack">Lewy obrońca gości</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayLeftBack"
+            required
+            [(ngModel)]="match.awayLeftBack"
+            name="awayLeftBack"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayLeftCenterBack">Lewy środkowy obrońca gości</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayLeftCenterBack"
+            required
+            [(ngModel)]="match.awayLeftCenterBack"
+            name="awayLeftCenterBack"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayRightCenterBack">Prawy środkowy obrońca gości</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayRightCenterBack"
+            required
+            [(ngModel)]="match.awayRightCenterBack"
+            name="awayRightCenterBack"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayRightBack">Prawy obrońca gości</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayRightBack"
+            required
+            [(ngModel)]="match.awayRightBack"
+            name="awayRightBack"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayLeftMidfielder">Lewy pomocnik gości</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayLeftMidfielder"
+            required
+            [(ngModel)]="match.awayLeftMidfielder"
+            name="awayLeftMidfielder"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayLeftCenterMidfielder">Lewy środkowy pomocnik gości</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayLeftCenterMidfielder"
+            required
+            [(ngModel)]="match.awayLeftCenterMidfielder"
+            name="awayLeftCenterMidfielder"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayRightCenterMidfielder">Prawy środkowy pomocnik gości</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayRightCenterMidfielder"
+            required
+            [(ngModel)]="match.awayRightCenterMidfielder"
+            name="awayRightCenterMidfielder"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayRightMidfielder">Prawy pomocnik gości</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayRightMidfielder"
+            required
+            [(ngModel)]="match.awayRightMidfielder"
+            name="awayRightMidfielder"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayLeftStriker">Lewy napastnik gości</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayLeftStriker"
+            required
+            [(ngModel)]="match.awayLeftStriker"
+            name="awayLeftStriker"
+            />
+        </div>
+        <div class="form-group">
+            <label for="awayRightStriker">Prawy napastnik gości</label>
+            <input
+            type="text"
+            class="form-control"
+            id="awayRightStriker"
+            required
+            [(ngModel)]="match.awayRightStriker"
+            name="awayRightStriker"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeGoalkeeper">Bramkarz gospodarzy</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeGoalkeeper"
+            required
+            [(ngModel)]="match.homeGoalkeeper"
+            name="homeGoalkeeper"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeLeftBack">Lewy obrońca gospodarzy</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeLeftBack"
+            required
+            [(ngModel)]="match.homeLeftBack"
+            name="homeLeftBack"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeLeftCenterBack">Lewy środkowy obrońca gospodarzy</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeLeftCenterBack"
+            required
+            [(ngModel)]="match.homeLeftCenterBack"
+            name="homeLeftCenterBack"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeRightCenterBack">Prawy środkowy obrońca gospodarzy</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeRightCenterBack"
+            required
+            [(ngModel)]="match.homeRightCenterBack"
+            name="homeRightCenterBack"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeRightBack">Prawy obrońca gospodarzy</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeRightBack"
+            required
+            [(ngModel)]="match.homeRightBack"
+            name="homeRightBack"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeLeftMidfielder">Lewy pomocnik gospodarzy</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeLeftMidfielder"
+            required
+            [(ngModel)]="match.homeLeftMidfielder"
+            name="homeLeftMidfielder"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeLeftCenterMidfielder">Lewy środkowy pomocnik gospodarzy</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeLeftCenterMidfielder"
+            required
+            [(ngModel)]="match.homeLeftCenterMidfielder"
+            name="homeLeftCenterMidfielder"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeRightCenterMidfielder">Prawy środkowy pomocnik gospodarzy</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeRightCenterMidfielder"
+            required
+            [(ngModel)]="match.homeRightCenterMidfielder"
+            name="homeRightCenterMidfielder"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeRightMidfielder">Prawy pomocnik gospodarzy</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeRightMidfielder"
+            required
+            [(ngModel)]="match.homeRightMidfielder"
+            name="homeRightMidfielder"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeLeftStriker">Lewy napastnik gospodarzy</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeLeftStriker"
+            required
+            [(ngModel)]="match.homeLeftStriker"
+            name="homeLeftStriker"
+            />
+        </div>
+        <div class="form-group">
+            <label for="homeRightStriker">Prawy napastnik gospodarzy</label>
+            <input
+            type="text"
+            class="form-control"
+            id="homeRightStriker"
+            required
+            [(ngModel)]="match.homeRightStriker"
+            name="homeRightStriker"
+            />
+        </div>
+        <button (click)="saveMatch()" class="btn btn-success">Dodaj</button>
+        </div>
+        <div *ngIf="submitted">
+        <h4>Pomyślnie dodano mecz!</h4>
+        <button class="btn btn-success" (click)="newMatch()">Dodaj nowy</button>
+        </div>
+    </div>
+</div>

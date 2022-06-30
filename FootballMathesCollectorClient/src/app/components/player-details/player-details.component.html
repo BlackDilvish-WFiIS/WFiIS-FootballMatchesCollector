@@ -1,0 +1,92 @@
+<div *ngIf="viewMode; else editable">
+    <div *ngIf="currentPlayer.id">
+      <h4>Piłkarz</h4>
+      <div>
+        <label><strong>Imię:</strong></label> {{ currentPlayer.firstName }}
+      </div>
+      <div>
+        <label><strong>Nazwisko:</strong></label>
+        {{ currentPlayer.lastName }}
+      </div>
+      <div>
+        <label><strong>Wiek:</strong></label>
+        {{ currentPlayer.age }}
+      </div>
+      <div>
+        <label><strong>Klub:</strong></label>
+        {{ currentPlayer.club }}
+      </div>
+      <a
+        class="badge badge-warning"
+        routerLink="/players/{{ currentPlayer.id }}"
+      >
+        Edytuj
+      </a>
+    </div>
+    <div *ngIf="!currentPlayer">
+      <br />
+      <p>Proszę wybrać zawodnika...</p>
+    </div>
+  </div>
+  <ng-template #editable>
+    <div *ngIf="currentPlayer.id" class="edit-form">
+      <h4>Piłkarz</h4>
+      <form>
+        <div class="form-group">
+          <label for="firstName">Imię</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            [(ngModel)]="currentPlayer.firstName"
+            name="firstName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Nazwisko</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            [(ngModel)]="currentPlayer.lastName"
+            name="lastName"
+          />
+        </div>
+        <div class="form-group">
+            <label for="age">Wiek</label>
+            <input
+              type="number"
+              class="form-control"
+              id="age"
+              [(ngModel)]="currentPlayer.age"
+              name="age"
+            />
+          </div>
+        <div class="form-group">
+          <label for="club">Klub</label>
+          <input
+            type="text"
+            class="form-control"
+            id="club"
+            [(ngModel)]="currentPlayer.club"
+            name="club"
+          />
+        </div>
+      </form>
+      <button class="badge badge-danger mr-2" (click)="deletePlayer()">
+        Usuń
+      </button>
+      <button
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updatePlayer()"
+      >
+        Aktualizuj
+      </button>
+      <p>{{ message }}</p>
+    </div>
+    <div *ngIf="!currentPlayer.id">
+      <br />
+      <p>Wczytywanie...</p>
+    </div>
+  </ng-template>
